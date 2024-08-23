@@ -17,6 +17,7 @@
             background-image: url('https://media.discordapp.net/attachments/1268646787053260891/1274399542519009393/banner_cloud.png?ex=66ca0590&is=66c8b410&hm=b1f4de4916d9c1e50108b64a21262444287ba15d994291e25bb932220940c1ed&=&format=webp&quality=lossless&width=494&height=278');
             background-size: cover;
             background-position: center;
+            position: relative; /* Necessário para o z-index */
         }
         .container {
             background-image: url('https://media.discordapp.net/attachments/1268646787053260891/1274399542519009393/banner_cloud.png?ex=66ca0590&is=66c8b410&hm=b1f4de4916d9c1e50108b64a21262444287ba15d994291e25bb932220940c1ed&=&format=webp&quality=lossless&width=494&height=278');
@@ -29,6 +30,9 @@
             max-width: 600px;
             width: 100%;
             color: #800080; /* Cor roxa para o texto */
+            position: absolute; /* Necessário para o z-index */
+            z-index: 1; /* Define o nível de sobreposição */
+            transform: translateY(-20px); /* Ajusta a posição para cima */
         }
         img {
             max-width: 100%;
