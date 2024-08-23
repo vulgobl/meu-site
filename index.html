@@ -17,7 +17,6 @@
             background-image: url('https://media.discordapp.net/attachments/1268646787053260891/1274399542519009393/banner_cloud.png?ex=66ca0590&is=66c8b410&hm=b1f4de4916d9c1e50108b64a21262444287ba15d994291e25bb932220940c1ed&=&format=webp&quality=lossless&width=494&height=278');
             background-size: cover;
             background-position: center;
-            position: relative; /* Necessário para o z-index */
         }
         .container {
             background-image: url('https://media.discordapp.net/attachments/1268646787053260891/1274399542519009393/banner_cloud.png?ex=66ca0590&is=66c8b410&hm=b1f4de4916d9c1e50108b64a21262444287ba15d994291e25bb932220940c1ed&=&format=webp&quality=lossless&width=494&height=278');
@@ -30,9 +29,9 @@
             max-width: 600px;
             width: 100%;
             color: #800080; /* Cor roxa para o texto */
-            position: absolute; /* Necessário para o z-index */
-            z-index: 1; /* Define o nível de sobreposição */
-            transform: translateY(-20px); /* Ajusta a posição para cima */
+            position: absolute;
+            z-index: 1;
+            transform: translateY(-20px);
         }
         img {
             max-width: 100%;
@@ -41,6 +40,24 @@
         h1, p {
             color: #800080; /* Cor roxa */
         }
+        .buttons {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            color: #fff;
+            background-color: #800080; /* Cor roxa */
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #660066; /* Cor roxa mais escura ao passar o mouse */
+        }
     </style>
 </head>
 <body>
@@ -48,6 +65,10 @@
         <img src="https://media-gru2-2.cdn.whatsapp.net/v/t61.24694-24/441333974_449620878026657_4179106593938223778_n.jpg?ccb=11-4&oh=01_Q5AaICoqzcIs2woD-HZoAY-43tMWB5rHrbXJ4RbIXg283U6L&oe=66D62025&_nc_sid=5e03e0&_nc_cat=111" alt="Imagem de Cabeçalho">
         <h1>Autenticação Completa!</h1>
         <p>Obrigado por autenticar. Você pode fechar esta janela agora.</p>
+        <div class="buttons">
+            <a href="https://discord.gg/FGNYpQZQ7S" class="button" target="_blank">Acessar Discord</a>
+            <a href="https://chat.whatsapp.com/DvZHPxYlp530SzL1sxxAjP" class="button" target="_blank">Entrar no WhatsApp</a>
+        </div>
     </div>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
