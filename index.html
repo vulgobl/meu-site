@@ -1,39 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site Personalizado</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Página de Redirecionamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        h1, p {
+            color: #800080; /* Cor roxa */
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao Meu Site</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>Welcome to the home page.</p>
-        </section>
-        <section id="about">
-            <h2>About</h2>
-            <p>Learn more about us.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Get in touch with us.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Meu Site</p>
-    </footer>
-    <script src="script.js"></script>
+    <div class="container">
+        <img src="https://media-gru2-2.cdn.whatsapp.net/v/t61.24694-24/441333974_449620878026657_4179106593938223778_n.jpg?ccb=11-4&oh=01_Q5AaICoqzcIs2woD-HZoAY-43tMWB5rHrbXJ4RbIXg283U6L&oe=66D62025&_nc_sid=5e03e0&_nc_cat=111" alt="Imagem de Cabeçalho">
+        <h1>Autenticação Completa!</h1>
+        <p>Obrigado por autenticar. Você pode fechar esta janela agora.</p>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code'); // Código de autorização do OAuth2
+        if (code) {
+            console.log('Código de Autorização recebido:', code);
+            // Aqui você pode enviar o código para o backend para processá-lo
+        }
+    </script>
 </body>
 </html>
