@@ -19,7 +19,7 @@
             background-position: center;
         }
         .container {
-            background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
             border: 1px solid rgba(255, 255, 255, 0.3); /* Borda branca semi-transparente */
             border-radius: 8px;
             padding: 20px;
@@ -29,6 +29,8 @@
             color: #fff; /* Cor branca para o texto dentro do quadrado */
             position: relative;
             text-align: center;
+            z-index: 1; /* Mantém o contêiner na frente */
+            backdrop-filter: blur(5px); /* Adiciona desfoque ao fundo */
         }
         img {
             max-width: 100%;
