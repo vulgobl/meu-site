@@ -17,6 +17,7 @@
             background-image: url('https://media.discordapp.net/attachments/1268646787053260891/1274399542519009393/banner_cloud.png?ex=66cb5710&is=66ca0590&hm=b7d8833ad8fc016f6f41e6ca60bf6035898b052ee640bd42bc9ef0dcf2ede74c&=&format=webp&quality=lossless&width=638&height=359');
             background-size: cover;
             background-position: center;
+            perspective: 1000px; /* Adiciona perspectiva para efeito 3D */
         }
         .container {
             background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
@@ -29,7 +30,7 @@
             color: #fff; /* Cor branca para o texto dentro do quadrado */
             position: relative;
             text-align: center;
-            z-index: 1; /* Mantém o contêiner na frente */
+            transform: translateZ(-100px); /* Move o contêiner para trás no eixo Z */
             backdrop-filter: blur(5px); /* Adiciona desfoque ao fundo */
         }
         img {
