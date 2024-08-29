@@ -17,28 +17,38 @@
             background-image: url('https://media.discordapp.net/attachments/1278718712236736685/1278718726325272586/banner_cloud.png?ex=66d1d31d&is=66d0819d&hm=2dc9fa1e8041c1e9ce90a073d7af5000e3bfe55901d3469976db449c91bed9e9&=&format=webp&quality=lossless&width=574&height=323');
             background-size: cover;
             background-position: center;
-            perspective: 1000px; /* Adiciona perspectiva para efeito 3D */
+            perspective: 1000px;
+            animation: fadeIn 2s ease-in-out; /* Animação de Fade-In */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         .container {
-            background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-            border: 1px solid rgba(255, 255, 255, 0.3); /* Borda branca semi-transparente */
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             width: 100%;
-            color: #fff; /* Cor branca para o texto dentro do quadrado */
+            color: #fff;
             position: relative;
             text-align: center;
-            transform: translateZ(-100px); /* Move o contêiner para trás no eixo Z */
-            backdrop-filter: blur(5px); /* Adiciona desfoque ao fundo */
+            transform: translateZ(-100px);
+            backdrop-filter: blur(5px);
+            animation: wobble 3s ease-in-out infinite; /* Animação de Oscilação */
+        }
+        @keyframes wobble {
+            0%, 100% { transform: translateZ(-100px) rotate(-1deg); }
+            50% { transform: translateZ(-100px) rotate(1deg); }
         }
         img {
             max-width: 100%;
             border-radius: 8px;
         }
         h1, p {
-            color: #fff; /* Cor branca para o texto */
+            color: #fff;
         }
         .buttons {
             margin-top: 20px;
@@ -48,7 +58,7 @@
             padding: 10px 20px;
             margin: 5px;
             color: #fff;
-            background-color: #660066; /* Cor roxa mais escura para os botões */
+            background-color: #660066;
             border: none;
             border-radius: 5px;
             text-decoration: none;
@@ -57,7 +67,7 @@
             transition: background-color 0.3s;
         }
         .button:hover {
-            background-color: #440044; /* Cor roxa ainda mais escura ao passar o mouse */
+            background-color: #440044;
         }
     </style>
 </head>
@@ -73,7 +83,7 @@
     </div>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const code = urlParams.get('code'); // Código de autorização do OAuth2
+        const code = urlParams.get('code');
         if (code) {
             console.log('Código de Autorização recebido:', code);
             // Aqui você pode enviar o código para o backend para processá-lo
